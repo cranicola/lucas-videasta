@@ -72,27 +72,26 @@
       display: flex;
       gap: 0.5rem;
       align-items: center;
-      margin-left: 1.5rem;
+      margin-left: 1rem;
     }
 
     .nav-social a {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 34px;
-      height: 34px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
-      border: 1px solid rgba(122,227,255,0.2);
-      color: rgba(122,227,255,0.35);
+      border: 1px solid rgba(122,227,255,0.5);
+      color: rgba(122,227,255,0.6);
       text-decoration: none;
-      font-size: 0.85rem;
       transition: all 0.3s;
     }
 
     .nav-social a:hover {
       border-color: var(--accent);
       color: var(--accent);
-      background: rgba(122,227,255,0.08);
+      background: rgba(122,227,255,0.12);
     }
 
     /* ── HERO ── */
@@ -879,7 +878,26 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#hero" class="nav-logo">Lucas Videasta</a>
+    <div style="display:flex; align-items:center; gap:0.8rem;">
+      <a href="#hero" class="nav-logo">Lucas Videasta</a>
+      <div class="nav-social">
+        <a href="https://www.instagram.com/lucas.videasta/" target="_blank" title="Instagram">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+        <a href="https://wa.me/5581996190904?text=Oi%20Lucas%2C%20vi%20seu%20portf%C3%B3lio%20e%20me%20interessei%20em%20fazer%20um%20trabalho%20com%20voc%C3%AA!" target="_blank" title="WhatsApp">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+          </svg>
+        </a>
+        <a href="https://www.behance.net/lucasmariz4" target="_blank" title="Behance">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 1.2.836 1.9 2.056 1.9.874 0 1.452-.439 1.724-1.068l3.976.097zm-5.767-6.556c-1.08 0-1.764.622-1.964 1.723h3.842c-.1-.975-.71-1.723-1.878-1.723zM9.648 12.276c.554-.6.864-1.448.864-2.566C10.512 7.5 9.108 6 6.667 6H0v12h6.916c2.57 0 4.262-1.352 4.262-3.786 0-1.22-.42-2.177-1.53-2.938zm-6.29-3.78h2.979c.932 0 1.541.465 1.541 1.363 0 .912-.614 1.405-1.57 1.405H3.358V8.496zm3.29 6.986H3.357v-2.85h3.384c1.044 0 1.705.483 1.705 1.415 0 .93-.632 1.435-1.798 1.435z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
     <ul class="nav-links">
       <li><a href="#categorias">Trabalhos</a></li>
       <li><a href="#sobre">Sobre</a></li>
@@ -887,23 +905,6 @@
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
-    <div class="nav-social">
-      <a href="https://www.instagram.com/lucas.videasta/" target="_blank" title="Instagram">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-        </svg>
-      </a>
-      <a href="https://wa.me/5581996190904?text=Oi%20Lucas%2C%20vi%20seu%20portf%C3%B3lio%20e%20me%20interessei%20em%20fazer%20um%20trabalho%20com%20voc%C3%AA!" target="_blank" title="WhatsApp">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
-        </svg>
-      </a>
-      <a href="https://www.behance.net/lucasmariz4" target="_blank" title="Behance">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 1.2.836 1.9 2.056 1.9.874 0 1.452-.439 1.724-1.068l3.976.097zm-5.767-6.556c-1.08 0-1.764.622-1.964 1.723h3.842c-.1-.975-.71-1.723-1.878-1.723zM9.648 12.276c.554-.6.864-1.448.864-2.566C10.512 7.5 9.108 6 6.667 6H0v12h6.916c2.57 0 4.262-1.352 4.262-3.786 0-1.22-.42-2.177-1.53-2.938zm-6.29-3.78h2.979c.932 0 1.541.465 1.541 1.363 0 .912-.614 1.405-1.57 1.405H3.358V8.496zm3.29 6.986H3.357v-2.85h3.384c1.044 0 1.705.483 1.705 1.415 0 .93-.632 1.435-1.798 1.435z"/>
-        </svg>
-      </a>
-    </div>
   </nav>
 
   <!-- HERO -->
@@ -939,7 +940,6 @@
 
   <!-- CARROSSEL DE CATEGORIAS -->
   <section id="categorias" style="padding:0;">
-    <div id="categorias" style="padding:0;"></div>
     <div style="padding: 5rem 0 5rem; background: #272729; overflow: hidden;">
       <div class="categorias-header">
         <p>Explore por tipo de projeto</p>
@@ -1059,7 +1059,7 @@
         <div class="servico-body">
           <div class="servico-body-inner">
             <p class="servico-desc">Um olhar construído no cinema que chega a qualquer tipo de produção. Experiência em curtas e longas-metragens — ficção e documentário. Captação com Canon T3i, lentes 50mm e 18-135mm e gravação de áudio com Tascam.</p>
-            <img src="https://images.unsplash.com/photo-1537724326059-2ea20251b9c8?w=600&q=80" class="servico-img" alt="Câmera de filmagem" />
+            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&q=80" class="servico-img" alt="Câmera de filmagem" />
           </div>
         </div>
       </div>
