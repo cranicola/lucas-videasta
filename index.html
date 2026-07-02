@@ -1285,7 +1285,7 @@
     }
 
     // Filtros do portfolio
-    function filterPortfolio(category, btn) {
+    function filterPortfolio(category, btn, scroll) {
       document.querySelectorAll('.filter-btn').forEach(b => {
         b.classList.remove('active');
         if (b.dataset.filter === category) b.classList.add('active');
@@ -1301,7 +1301,9 @@
         }
       });
 
-      document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
+      if (scroll !== false) {
+        document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
+      }
     }
 
     // Auto-rotate portfolio filters
@@ -1318,7 +1320,7 @@
         const activeIdx = btns.findIndex(b => b.classList.contains('active'));
         const nextIdx = (activeIdx + 1) % btns.length;
         const next = btns[nextIdx];
-        filterPortfolio(next.dataset.filter, next);
+        filterPortfolio(next.dataset.filter, next, false);
       }, 3000);
     })();
 
