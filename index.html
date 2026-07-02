@@ -946,14 +946,14 @@
     <p class="section-label">Trabalhos</p>
     <p class="portfolio-intro">Uma seleção de projetos que mostram a variedade do meu trabalho — do institucional ao experimental, do comercial ao criativo.</p>
 
-    <div class="portfolio-filters">
-      <button class="filter-btn active" data-filter="todos" onclick="filterPortfolio('todos', this)">Todos</button>
-      <button class="filter-btn" data-filter="ia" onclick="filterPortfolio('ia', this)">Vídeo com IA</button>
+    <div class="portfolio-filters" id="portfolioFilters">
+      <button class="filter-btn active" data-filter="ia" onclick="filterPortfolio('ia', this)">Vídeo com IA</button>
       <button class="filter-btn" data-filter="especialista" onclick="filterPortfolio('especialista', this)">Especialista</button>
       <button class="filter-btn" data-filter="comercial" onclick="filterPortfolio('comercial', this)">Comercial</button>
+      <button class="filter-btn" data-filter="artistico" onclick="filterPortfolio('artistico', this)">Artístico</button>
       <button class="filter-btn" data-filter="podcast" onclick="filterPortfolio('podcast', this)">Podcast</button>
       <button class="filter-btn" data-filter="institucional" onclick="filterPortfolio('institucional', this)">Institucional</button>
-      <button class="filter-btn" data-filter="artistico" onclick="filterPortfolio('artistico', this)">Artístico</button>
+      <button class="filter-btn" data-filter="todos" onclick="filterPortfolio('todos', this)">Todos</button>
     </div>
 
     <div class="portfolio-grid">
@@ -1286,14 +1286,12 @@
 
     // Filtros do portfolio
     function filterPortfolio(category, btn) {
-      // Atualiza botão ativo — por referência direta ou buscando pelo data-filter
       document.querySelectorAll('.filter-btn').forEach(b => {
         b.classList.remove('active');
         if (b.dataset.filter === category) b.classList.add('active');
       });
       if (btn) { btn.classList.add('active'); }
 
-      // Filtra cards
       document.querySelectorAll('.portfolio-item').forEach(item => {
         const cat = item.dataset.category;
         if (category === 'todos' || cat === category) {
@@ -1303,9 +1301,26 @@
         }
       });
 
-      // Scroll para o portfolio
       document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
     }
+
+    // Auto-rotate portfolio filters
+    (function() {
+      const filtersEl = document.getElementById('portfolioFilters');
+      let paused = false;
+
+      filtersEl.addEventListener('mouseenter', () => paused = true);
+      filtersEl.addEventListener('mouseleave', () => paused = false);
+
+      setInterval(() => {
+        if (paused) return;
+        const btns = Array.from(filtersEl.querySelectorAll('.filter-btn'));
+        const activeIdx = btns.findIndex(b => b.classList.contains('active'));
+        const nextIdx = (activeIdx + 1) % btns.length;
+        const next = btns[nextIdx];
+        filterPortfolio(next.dataset.filter, next);
+      }, 3000);
+    })();
 
     // Accordion serviços
     function toggleServico(card) {
