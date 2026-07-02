@@ -940,71 +940,135 @@
     </div>
   </section>
 
-  <!-- CARROSSEL DE CATEGORIAS -->
-  <section id="categorias" style="padding:0;">
-    <div style="padding: 5rem 0 5rem; background: #272729; overflow: hidden;">
-      <div class="categorias-header">
-        <p>Explore por tipo de projeto</p>
-      </div>
-      <div class="carousel-track-wrapper">
-        <div class="carousel-track" id="carouselTrack">
+  <!-- PORTFOLIO -->
+  <section id="portfolio" style="position:relative;">
+    <span class="section-number">01</span>
+    <p class="section-label">Trabalhos</p>
+    <p class="portfolio-intro">Uma seleção de projetos que mostram a variedade do meu trabalho — do institucional ao experimental, do comercial ao criativo.</p>
 
-          <a href="#portfolio" class="categoria-card" onclick="filterPortfolio('ia')">
-            <div class="categoria-bg" style="background-image:url('capa IA.png'); background-size:cover; background-position:center;"></div>
-            <div class="categoria-overlay"></div>
-            <div class="categoria-content">
-              <span class="categoria-tag">Vídeo com IA</span>
-              <div class="categoria-title">Inteligência Artificial</div>
-              <div class="categoria-desc">Produções que usam IA para criar o que antes não existia — cenários, vozes, personagens e narrativas geradas por tecnologia.</div>
-            </div>
-          </a>
+    <div class="portfolio-filters">
+      <button class="filter-btn active" data-filter="todos" onclick="filterPortfolio('todos', this)">Todos</button>
+      <button class="filter-btn" data-filter="ia" onclick="filterPortfolio('ia', this)">Vídeo com IA</button>
+      <button class="filter-btn" data-filter="especialista" onclick="filterPortfolio('especialista', this)">Especialista</button>
+      <button class="filter-btn" data-filter="comercial" onclick="filterPortfolio('comercial', this)">Comercial</button>
+      <button class="filter-btn" data-filter="podcast" onclick="filterPortfolio('podcast', this)">Podcast</button>
+      <button class="filter-btn" data-filter="institucional" onclick="filterPortfolio('institucional', this)">Institucional</button>
+      <button class="filter-btn" data-filter="artistico" onclick="filterPortfolio('artistico', this)">Artístico</button>
+    </div>
 
-          <a href="#portfolio" class="categoria-card" onclick="filterPortfolio('profissionais')">
-            <div class="categoria-bg" style="background-image:url('capa hematologista.png');"></div>
-            <div class="categoria-overlay"></div>
-            <div class="categoria-content">
-              <span class="categoria-tag">Profissionais</span>
-              <div class="categoria-title">Conteúdo para especialistas</div>
-              <div class="categoria-desc">Vídeos para médicos, advogados e outros profissionais que querem autoridade e presença digital consistente.</div>
-            </div>
-          </a>
+    <div class="portfolio-grid">
 
-          <a href="#portfolio" class="categoria-card" onclick="filterPortfolio('podcast')">
-            <div class="categoria-bg" style="background-image:url('podcast-fala-quem-faz..png'); background-position: center top;"></div>
-            <div class="categoria-overlay"></div>
-            <div class="categoria-content">
-              <span class="categoria-tag">Podcast</span>
-              <div class="categoria-title">Produção de Podcast</div>
-              <div class="categoria-desc">Captação multicâmera, áudio profissional e edição completa — do episódio bruto ao conteúdo pronto para publicar.</div>
-            </div>
-          </a>
-
-          <a href="#portfolio" class="categoria-card" onclick="filterPortfolio('institucional')">
-            <div class="categoria-bg" style="background: linear-gradient(135deg, #0D1520 0%, #1a2a3a 100%);"></div>
-            <div class="categoria-overlay"></div>
-            <div class="categoria-content">
-              <span class="categoria-tag">Institucional</span>
-              <div class="categoria-title">Vídeos Corporativos</div>
-              <div class="categoria-desc">Campanhas e vídeos institucionais com olhar cinematográfico — para empresas que querem passar credibilidade.</div>
-            </div>
-          </a>
-
-          <a href="#portfolio" class="categoria-card" onclick="filterPortfolio('artistico')">
-            <div class="categoria-bg" style="background-image:url('Capa vivencia regenerativa.png'); background-size:cover; background-position:center;"></div>
-            <div class="categoria-overlay"></div>
-            <div class="categoria-content">
-              <span class="categoria-tag">Artístico</span>
-              <div class="categoria-title">Produção com liberdade visual</div>
-              <div class="categoria-desc">Projetos onde a estética e a emoção conduzem — vídeos que vão além da execução técnica e tocam quem assiste.</div>
-            </div>
-          </a>
-
+      <a href="https://www.behance.net/gallery/249982515/Video-feito-com-IA" target="_blank"
+         class="portfolio-item" data-category="ia">
+        <div class="portfolio-item-inner" style="background-image:url('capa IA.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-overlay always-visible">
+          <div class="portfolio-item-type">Vídeo com IA · Empresa de tecnologia em segurança</div>
+          <div class="portfolio-item-title">Contando Carneirinhos</div>
         </div>
-      </div>
-      <div class="carousel-nav">
-        <button class="carousel-btn" onclick="scrollCarousel(-1)">&#8592;</button>
-        <button class="carousel-btn" onclick="scrollCarousel(1)">&#8594;</button>
-      </div>
+      </a>
+
+      <a href="https://www.behance.net/gallery/246172411/Podcast-FALA-QUEM-FAZ" target="_blank"
+         class="portfolio-item" data-category="podcast">
+        <div class="portfolio-item-inner" style="background-image:url('podcast-fala-quem-faz..png'); background-size:cover; background-position:center top; border:none;"></div>
+        <div class="portfolio-overlay always-visible">
+          <div class="portfolio-item-type">Podcast · Produção Audiovisual</div>
+          <div class="portfolio-item-title">Fala Quem Faz</div>
+        </div>
+      </a>
+
+      <a href="https://www.behance.net/gallery/246173603/Serie-HEMATOLOGIA" target="_blank"
+         class="portfolio-item" data-category="especialista">
+        <div class="portfolio-item-inner" style="background-image:url('capa hematologista.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-overlay always-visible">
+          <div class="portfolio-item-type">Especialista · Saúde</div>
+          <div class="portfolio-item-title">Série Hematologia</div>
+        </div>
+      </a>
+
+      <a href="https://www.behance.net/gallery/246040947/O-VENTO-Origem-Fortim" target="_blank"
+         class="portfolio-item" data-category="artistico">
+        <div class="portfolio-item-inner" style="background-image:url('capa video fortim.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-overlay always-visible">
+          <div class="portfolio-item-type">Artístico · Imobiliário de luxo</div>
+          <div class="portfolio-item-title">O Vento</div>
+        </div>
+      </a>
+
+      <a href="https://www.behance.net/gallery/246172723/Vivencia-Regenerativa-VIDAS-POETICAS" target="_blank"
+         class="portfolio-item" data-category="artistico">
+        <div class="portfolio-item-inner" style="background-image:url('Capa vivencia regenerativa.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-overlay always-visible">
+          <div class="portfolio-item-type">Artístico</div>
+          <div class="portfolio-item-title">Vidas Poéticas</div>
+        </div>
+      </a>
+
+      <a href="https://www.behance.net/gallery/252056239/Comercial-Rastreamento-01" target="_blank"
+         class="portfolio-item" data-category="comercial">
+        <div class="portfolio-item-inner" style="background-image:url('capa 03.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-overlay always-visible">
+          <div class="portfolio-item-type">Comercial · Rastreamento</div>
+          <div class="portfolio-item-title">Comercial Rastreamento 01</div>
+        </div>
+      </a>
+
+      <a href="https://www.behance.net/gallery/252056183/Comercial-Rastreamento-02" target="_blank"
+         class="portfolio-item" data-category="comercial">
+        <div class="portfolio-item-inner" style="background-image:url('capa 02.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-overlay always-visible">
+          <div class="portfolio-item-type">Comercial · Rastreamento</div>
+          <div class="portfolio-item-title">Comercial Rastreamento 02</div>
+        </div>
+      </a>
+
+      <a href="https://www.behance.net/gallery/252056139/Cachorro-Falante-IA" target="_blank"
+         class="portfolio-item" data-category="ia">
+        <div class="portfolio-item-inner" style="background-image:url('capa 05.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-overlay always-visible">
+          <div class="portfolio-item-type">Vídeo com IA</div>
+          <div class="portfolio-item-title">Cachorro Falante</div>
+        </div>
+      </a>
+
+      <a href="https://www.behance.net/gallery/252056137/Dia-da-micro-pequenas-e-medias-empresas" target="_blank"
+         class="portfolio-item" data-category="ia">
+        <div class="portfolio-item-inner" style="background-image:url('capa 04.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-overlay always-visible">
+          <div class="portfolio-item-type">Vídeo com IA</div>
+          <div class="portfolio-item-title">Dia das Micro e Pequenas Empresas</div>
+        </div>
+      </a>
+
+      <a href="https://www.behance.net/gallery/252057281/Homenagem-ao-micro-pequeno-e-medio-empreendedor" target="_blank"
+         class="portfolio-item" data-category="ia">
+        <div class="portfolio-item-inner" style="background-image:url('capa 08.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-overlay always-visible">
+          <div class="portfolio-item-type">Vídeo com IA</div>
+          <div class="portfolio-item-title">Homenagem ao Empreendedor</div>
+        </div>
+      </a>
+
+      <a href="https://www.behance.net/gallery/252057347/Institucional-Arquitetura-01" target="_blank"
+         class="portfolio-item" data-category="especialista">
+        <div class="portfolio-item-inner" style="background-image:url('capa 06.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-overlay always-visible">
+          <div class="portfolio-item-type">Especialista · Arquitetura</div>
+          <div class="portfolio-item-title">Institucional Arquitetura 01</div>
+        </div>
+      </a>
+
+      <a href="https://www.behance.net/gallery/252057507/Institucional-Arquitetura-02" target="_blank"
+         class="portfolio-item" data-category="especialista">
+        <div class="portfolio-item-inner" style="background-image:url('capa 07.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-overlay always-visible">
+          <div class="portfolio-item-type">Especialista · Arquitetura</div>
+          <div class="portfolio-item-title">Institucional Arquitetura 02</div>
+        </div>
+      </a>
+
+    </div>
+    <div class="portfolio-cta">
+      <a href="https://www.behance.net/lucasmariz4" target="_blank" class="btn btn-outline">Ver portfolio completo no Behance</a>
     </div>
   </section>
 
@@ -1012,7 +1076,7 @@
 
   <!-- SOBRE -->
   <section id="sobre" style="position:relative;">
-    <span class="section-number">01</span>
+    <span class="section-number">02</span>
     <div class="sobre-text">
       <p class="section-label">Sobre</p>
       <h2 class="section-title">Cinema<br />na veia.</h2>
@@ -1045,7 +1109,7 @@
 
   <!-- SERVIÇOS -->
   <section id="servicos" style="position:relative;">
-    <span class="section-number">02</span>
+    <span class="section-number">03</span>
     <p class="section-label">O que faço</p>
     <h2 class="section-title">Serviços</h2>
     <div class="servicos-grid">
@@ -1098,77 +1162,6 @@
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <div class="gray-rule"></div>
-
-  <!-- PORTFOLIO -->
-  <section id="portfolio" style="position:relative;">
-    <span class="section-number">03</span>
-    <p class="section-label">Trabalhos</p>
-    <h2 class="section-title">Portfolio</h2>
-    <p class="portfolio-intro">Uma seleção de projetos que mostram a variedade do meu trabalho — do institucional ao experimental, do comercial ao criativo.</p>
-
-    <div class="portfolio-filters">
-      <button class="filter-btn active" data-filter="todos" onclick="filterPortfolio('todos', this)">Todos</button>
-      <button class="filter-btn" data-filter="ia" onclick="filterPortfolio('ia', this)">Vídeo com IA</button>
-      <button class="filter-btn" data-filter="profissionais" onclick="filterPortfolio('profissionais', this)">Profissionais</button>
-      <button class="filter-btn" data-filter="podcast" onclick="filterPortfolio('podcast', this)">Podcast</button>
-      <button class="filter-btn" data-filter="institucional" onclick="filterPortfolio('institucional', this)">Institucional</button>
-      <button class="filter-btn" data-filter="artistico" onclick="filterPortfolio('artistico', this)">Artístico</button>
-    </div>
-
-    <div class="portfolio-grid">
-
-      <a href="https://www.behance.net/gallery/249982515/Video-feito-com-IA" target="_blank"
-         class="portfolio-item" data-category="ia">
-        <div class="portfolio-item-inner" style="background-image:url('capa IA.png'); background-size:cover; background-position:center; border:none;"></div>
-        <div class="portfolio-overlay always-visible">
-          <div class="portfolio-item-type">Vídeo com IA · Empresa de tecnologia em segurança</div>
-          <div class="portfolio-item-title">Contando Carneirinhos</div>
-        </div>
-      </a>
-
-      <a href="https://www.behance.net/gallery/246172411/Podcast-FALA-QUEM-FAZ" target="_blank"
-         class="portfolio-item" data-category="podcast">
-        <div class="portfolio-item-inner" style="background-image:url('podcast-fala-quem-faz..png'); background-size:cover; background-position:center top; border:none;"></div>
-        <div class="portfolio-overlay always-visible">
-          <div class="portfolio-item-type">Podcast · Produção Audiovisual</div>
-          <div class="portfolio-item-title">Fala Quem Faz</div>
-        </div>
-      </a>
-
-      <a href="https://www.behance.net/gallery/246173603/Serie-HEMATOLOGIA" target="_blank"
-         class="portfolio-item" data-category="profissionais">
-        <div class="portfolio-item-inner" style="background-image:url('capa hematologista.png'); background-size:cover; background-position:center; border:none;"></div>
-        <div class="portfolio-overlay always-visible">
-          <div class="portfolio-item-type">Profissionais · Saúde</div>
-          <div class="portfolio-item-title">Série Hematologia</div>
-        </div>
-      </a>
-
-      <a href="https://www.behance.net/gallery/246040947/O-VENTO-Origem-Fortim" target="_blank"
-         class="portfolio-item" data-category="artistico">
-        <div class="portfolio-item-inner" style="background-image:url('capa video fortim.png'); background-size:cover; background-position:center; border:none;"></div>
-        <div class="portfolio-overlay always-visible">
-          <div class="portfolio-item-type">Artístico · Imobiliário de luxo</div>
-          <div class="portfolio-item-title">O Vento</div>
-        </div>
-      </a>
-
-      <a href="https://www.behance.net/gallery/246172723/Vivencia-Regenerativa-VIDAS-POETICAS" target="_blank"
-         class="portfolio-item" data-category="artistico">
-        <div class="portfolio-item-inner" style="background-image:url('Capa vivencia regenerativa.png'); background-size:cover; background-position:center; border:none;"></div>
-        <div class="portfolio-overlay always-visible">
-          <div class="portfolio-item-type">Artístico</div>
-          <div class="portfolio-item-title">Vidas Poéticas</div>
-        </div>
-      </a>
-
-    </div>
-    <div class="portfolio-cta">
-      <a href="https://www.behance.net/lucasmariz4" target="_blank" class="btn btn-outline">Ver portfolio completo no Behance</a>
     </div>
   </section>
 
