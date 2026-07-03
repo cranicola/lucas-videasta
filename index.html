@@ -235,143 +235,6 @@
       margin-bottom: 3rem;
     }
 
-    /* ── CARROSSEL DE CATEGORIAS ── */
-    #categorias {
-      padding: 4rem 0 5rem;
-      background: var(--dark2);
-      overflow: hidden;
-    }
-
-    .categorias-header {
-      padding: 0 4rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .categorias-header p {
-      font-size: 0.7rem;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.5rem;
-    }
-
-    .categorias-header h2 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
-      color: #fff;
-    }
-
-    .carousel-track-wrapper {
-      position: relative;
-    }
-
-    .carousel-track {
-      display: flex;
-      gap: 1.5rem;
-      padding: 0.5rem 4rem 1.5rem;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-    }
-
-    .carousel-track::-webkit-scrollbar { display: none; }
-
-    .categoria-card {
-      flex: 0 0 320px;
-      scroll-snap-align: start;
-      position: relative;
-      aspect-ratio: 4/3;
-      border-radius: 3px;
-      overflow: hidden;
-      cursor: pointer;
-      text-decoration: none;
-      display: block;
-      border: 1px solid rgba(122,227,255,0.1);
-      transition: transform 0.3s, border-color 0.3s;
-    }
-
-    .categoria-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(122,227,255,0.4);
-    }
-
-    .categoria-bg {
-      position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center;
-      transition: transform 0.5s;
-    }
-
-    .categoria-card:hover .categoria-bg { transform: scale(1.05); }
-
-    .categoria-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(5,10,20,0.95) 0%, rgba(5,10,20,0.4) 55%, transparent 100%);
-    }
-
-    .categoria-content {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 1.5rem;
-    }
-
-    .categoria-tag {
-      display: inline-block;
-      padding: 0.2rem 0.7rem;
-      font-size: 0.62rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      background: var(--accent);
-      color: #111454;
-      border-radius: 2px;
-      margin-bottom: 0.6rem;
-      font-weight: 600;
-    }
-
-    .categoria-title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.5rem;
-      letter-spacing: 0.04em;
-      color: #fff;
-      line-height: 1;
-      margin-bottom: 0.5rem;
-    }
-
-    .categoria-desc {
-      font-size: 0.78rem;
-      color: rgba(224,232,240,0.75);
-      line-height: 1.5;
-    }
-
-    .carousel-nav {
-      display: flex;
-      gap: 0.6rem;
-      padding: 0 4rem;
-      margin-top: 1.2rem;
-    }
-
-    .carousel-btn {
-      width: 36px;
-      height: 36px;
-      border: 1px solid rgba(122,227,255,0.3);
-      background: transparent;
-      color: var(--accent);
-      border-radius: 2px;
-      cursor: pointer;
-      font-size: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s;
-    }
-
-    .carousel-btn:hover { background: rgba(122,227,255,0.15); border-color: var(--accent); }
-
     /* ── SOBRE ── */
     #sobre {
       background: #111454;
@@ -871,8 +734,6 @@
       .contato-grid { grid-template-columns: 1fr; gap: 3rem; }
       footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; }
       .scroll-indicator { left: 1.5rem; }
-      .categorias-header, .carousel-track, .carousel-nav { padding-left: 1.5rem; padding-right: 1.5rem; }
-      .categoria-card { flex: 0 0 260px; }
     }
   </style>
 </head>
@@ -893,18 +754,12 @@
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
           </svg>
         </a>
-        <a href="https://www.behance.net/lucasmariz4" target="_blank" title="Behance">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 1.2.836 1.9 2.056 1.9.874 0 1.452-.439 1.724-1.068l3.976.097zm-5.767-6.556c-1.08 0-1.764.622-1.964 1.723h3.842c-.1-.975-.71-1.723-1.878-1.723zM9.648 12.276c.554-.6.864-1.448.864-2.566C10.512 7.5 9.108 6 6.667 6H0v12h6.916c2.57 0 4.262-1.352 4.262-3.786 0-1.22-.42-2.177-1.53-2.938zm-6.29-3.78h2.979c.932 0 1.541.465 1.541 1.363 0 .912-.614 1.405-1.57 1.405H3.358V8.496zm3.29 6.986H3.357v-2.85h3.384c1.044 0 1.705.483 1.705 1.415 0 .93-.632 1.435-1.798 1.435z"/>
-          </svg>
-        </a>
       </div>
     </div>
     <ul class="nav-links">
-      <li><a href="#categorias">Trabalhos</a></li>
+      <li><a href="#portfolio">Trabalhos</a></li>
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#servicos">Serviços</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
   </nav>
@@ -931,7 +786,7 @@
     <p class="hero-tagline">Criando o que não existe.</p>
     <p class="hero-sub">Filmagem · Edição · Vídeo com IA</p>
     <div class="hero-cta">
-      <a href="#categorias" class="btn btn-primary">Ver trabalhos</a>
+      <a href="#portfolio" class="btn btn-primary">Ver trabalhos</a>
       <a href="https://wa.me/5581996190904?text=Oi%20Lucas%2C%20vi%20seu%20portf%C3%B3lio%20e%20me%20interessei%20em%20fazer%20um%20trabalho%20com%20voc%C3%AA!" target="_blank" class="btn btn-outline">Falar comigo</a>
     </div>
     <div class="scroll-indicator">
@@ -958,7 +813,7 @@
 
     <div class="portfolio-grid">
 
-      <a href="https://www.behance.net/gallery/249982515/Video-feito-com-IA" target="_blank"
+      <a href="https://youtube.com/shorts/qJRz9oKy4co" target="_blank"
          class="portfolio-item" data-category="ia">
         <div class="portfolio-item-inner" style="background-image:url('capa IA.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
@@ -967,7 +822,7 @@
         </div>
       </a>
 
-      <a href="https://www.behance.net/gallery/246172411/Podcast-FALA-QUEM-FAZ" target="_blank"
+      <a href="https://youtube.com/shorts/kB50iX6q-14" target="_blank"
          class="portfolio-item" data-category="podcast">
         <div class="portfolio-item-inner" style="background-image:url('podcast-fala-quem-faz..png'); background-size:cover; background-position:center top; border:none;"></div>
         <div class="portfolio-overlay always-visible">
@@ -976,7 +831,7 @@
         </div>
       </a>
 
-      <a href="https://www.behance.net/gallery/246173603/Serie-HEMATOLOGIA" target="_blank"
+      <a href="https://youtube.com/shorts/2JWnlvgjG7o" target="_blank"
          class="portfolio-item" data-category="especialista">
         <div class="portfolio-item-inner" style="background-image:url('capa hematologista.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
@@ -985,7 +840,7 @@
         </div>
       </a>
 
-      <a href="https://www.behance.net/gallery/246040947/O-VENTO-Origem-Fortim" target="_blank"
+      <a href="https://youtube.com/shorts/Y9f3Ymx3t8k" target="_blank"
          class="portfolio-item" data-category="artistico">
         <div class="portfolio-item-inner" style="background-image:url('capa video fortim.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
@@ -994,7 +849,7 @@
         </div>
       </a>
 
-      <a href="https://www.behance.net/gallery/246172723/Vivencia-Regenerativa-VIDAS-POETICAS" target="_blank"
+      <a href="https://youtube.com/shorts/mnsMmEoO8fg" target="_blank"
          class="portfolio-item" data-category="artistico">
         <div class="portfolio-item-inner" style="background-image:url('Capa vivencia regenerativa.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
@@ -1003,7 +858,7 @@
         </div>
       </a>
 
-      <a href="https://www.behance.net/gallery/252056239/Comercial-Rastreamento-01" target="_blank"
+      <a href="https://youtube.com/shorts/Z6bwmwp8DMY" target="_blank"
          class="portfolio-item" data-category="comercial">
         <div class="portfolio-item-inner" style="background-image:url('capa 03.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
@@ -1012,7 +867,7 @@
         </div>
       </a>
 
-      <a href="https://www.behance.net/gallery/252056183/Comercial-Rastreamento-02" target="_blank"
+      <a href="https://youtube.com/shorts/L1zI4znAhbg" target="_blank"
          class="portfolio-item" data-category="comercial">
         <div class="portfolio-item-inner" style="background-image:url('capa 02.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
@@ -1021,7 +876,7 @@
         </div>
       </a>
 
-      <a href="https://www.behance.net/gallery/252056139/Cachorro-Falante-IA" target="_blank"
+      <a href="https://youtube.com/shorts/YVII5-AH4mM" target="_blank"
          class="portfolio-item" data-category="ia">
         <div class="portfolio-item-inner" style="background-image:url('capa 05.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
@@ -1030,7 +885,7 @@
         </div>
       </a>
 
-      <a href="https://www.behance.net/gallery/252056137/Dia-da-micro-pequenas-e-medias-empresas" target="_blank"
+      <a href="https://youtube.com/shorts/RSnfklFaY2A" target="_blank"
          class="portfolio-item" data-category="ia">
         <div class="portfolio-item-inner" style="background-image:url('capa 04.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
@@ -1039,7 +894,7 @@
         </div>
       </a>
 
-      <a href="https://www.behance.net/gallery/252057281/Homenagem-ao-micro-pequeno-e-medio-empreendedor" target="_blank"
+      <a href="https://youtube.com/shorts/n-hywWF93UY" target="_blank"
          class="portfolio-item" data-category="ia">
         <div class="portfolio-item-inner" style="background-image:url('capa 08.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
@@ -1048,7 +903,7 @@
         </div>
       </a>
 
-      <a href="https://www.behance.net/gallery/252057347/Institucional-Arquitetura-01" target="_blank"
+      <a href="https://youtube.com/shorts/bOO9QrJv-b4" target="_blank"
          class="portfolio-item" data-category="especialista">
         <div class="portfolio-item-inner" style="background-image:url('capa 06.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
@@ -1057,7 +912,7 @@
         </div>
       </a>
 
-      <a href="https://www.behance.net/gallery/252057507/Institucional-Arquitetura-02" target="_blank"
+      <a href="https://youtube.com/shorts/V6ZufIKkkAU" target="_blank"
          class="portfolio-item" data-category="especialista">
         <div class="portfolio-item-inner" style="background-image:url('capa 07.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
@@ -1066,7 +921,7 @@
         </div>
       </a>
 
-      <a href="https://www.behance.net/gallery/252057951/Especialista-advocacia-01" target="_blank"
+      <a href="https://youtube.com/shorts/4FfiZMDNuXU" target="_blank"
          class="portfolio-item" data-category="especialista">
         <div class="portfolio-item-inner" style="background-image:url('capa 011.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
@@ -1075,7 +930,7 @@
         </div>
       </a>
 
-      <a href="https://www.behance.net/gallery/252058019/Especialista-advocacia-02" target="_blank"
+      <a href="https://youtube.com/shorts/nxblDwVyVgw" target="_blank"
          class="portfolio-item" data-category="especialista">
         <div class="portfolio-item-inner" style="background-image:url('capa 010.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
@@ -1084,7 +939,7 @@
         </div>
       </a>
 
-      <a href="https://www.behance.net/gallery/252058109/Comercial-Rastremento-03" target="_blank"
+      <a href="https://youtube.com/shorts/EHotcGpiRoM" target="_blank"
          class="portfolio-item" data-category="comercial">
         <div class="portfolio-item-inner" style="background-image:url('capa 01.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
@@ -1093,9 +948,6 @@
         </div>
       </a>
 
-    </div>
-    <div class="portfolio-cta">
-      <a href="https://www.behance.net/lucasmariz4" target="_blank" class="btn btn-outline">Ver portfolio completo no Behance</a>
     </div>
   </section>
 
@@ -1224,10 +1076,6 @@
             <span class="contato-link-icon">✉️</span>
             <span>lucasmarizz@gmail.com</span>
           </a>
-          <a href="https://www.behance.net/lucasmariz4" target="_blank" class="contato-link">
-            <span class="contato-link-icon">🎨</span>
-            <span>Behance</span>
-          </a>
           <a href="https://www.instagram.com/lucas.videasta/" target="_blank" class="contato-link">
             <span class="contato-link-icon">📷</span>
             <span>Instagram — @lucas.videasta</span>
@@ -1278,12 +1126,6 @@
       });
     });
 
-    // Carrossel
-    function scrollCarousel(dir) {
-      const track = document.getElementById('carouselTrack');
-      track.scrollBy({ left: dir * 350, behavior: 'smooth' });
-    }
-
     // Filtros do portfolio
     function filterPortfolio(category, btn, scroll) {
       document.querySelectorAll('.filter-btn').forEach(b => {
@@ -1309,10 +1151,15 @@
     // Auto-rotate portfolio filters
     (function() {
       const filtersEl = document.getElementById('portfolioFilters');
+      const sectionEl = document.getElementById('portfolio');
       let paused = false;
 
-      filtersEl.addEventListener('mouseenter', () => paused = true);
-      filtersEl.addEventListener('mouseleave', () => paused = false);
+      // Congela enquanto o mouse está em qualquer parte da seção de trabalhos,
+      // volta a girar quando o mouse sai da seção como um todo.
+      sectionEl.addEventListener('mouseenter', () => paused = true);
+      sectionEl.addEventListener('mouseleave', () => paused = false);
+      // Clicar numa categoria também congela (cobre toque, sem hover).
+      filtersEl.addEventListener('click', () => paused = true);
 
       setInterval(() => {
         if (paused) return;
