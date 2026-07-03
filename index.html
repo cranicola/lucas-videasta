@@ -235,6 +235,51 @@
       margin-bottom: 3rem;
     }
 
+    /* ── LIGHTBOX DE VÍDEO ── */
+    .video-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(5,8,16,0.93);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .video-lightbox.open { display: flex; }
+    .video-lightbox-frame {
+      position: relative;
+      height: 85vh;
+      aspect-ratio: 9 / 16;
+      max-width: 94vw;
+    }
+    .video-lightbox-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 6px;
+      background: #000;
+    }
+    .video-lightbox-close {
+      position: absolute;
+      top: 1.1rem;
+      right: 1.1rem;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid rgba(122,227,255,0.4);
+      background: rgba(5,8,16,0.6);
+      color: var(--accent);
+      font-size: 1.5rem;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    .video-lightbox-close:hover { background: rgba(122,227,255,0.15); border-color: var(--accent); }
+
     /* ── SOBRE ── */
     #sobre {
       background: #111454;
@@ -951,6 +996,13 @@
     </div>
   </section>
 
+  <div class="video-lightbox" id="videoLightbox" aria-hidden="true">
+    <button class="video-lightbox-close" id="videoLightboxClose" aria-label="Fechar vídeo">&times;</button>
+    <div class="video-lightbox-frame">
+      <iframe id="videoLightboxFrame" src="" title="Vídeo do portfólio" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
+    </div>
+  </div>
+
   <div class="gray-rule"></div>
 
   <!-- SOBRE -->
@@ -1147,6 +1199,43 @@
         document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
       }
     }
+
+    // Lightbox de vídeo — toca o Reel dentro do próprio site
+    (function() {
+      const lightbox = document.getElementById('videoLightbox');
+      const frame = document.getElementById('videoLightboxFrame');
+      const closeBtn = document.getElementById('videoLightboxClose');
+
+      function extractId(url) {
+        const m = url.match(/(?:shorts\/|embed\/|v=|youtu\.be\/)([A-Za-z0-9_-]{6,})/);
+        return m ? m[1] : null;
+      }
+      function openVideo(id) {
+        frame.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1';
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeVideo() {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        frame.src = '';
+        document.body.style.overflow = '';
+      }
+
+      document.querySelectorAll('.portfolio-item').forEach(a => {
+        a.addEventListener('click', e => {
+          const id = extractId(a.getAttribute('href') || '');
+          if (!id) return; // sem ID reconhecível: mantém o link normal
+          e.preventDefault();
+          openVideo(id);
+        });
+      });
+
+      closeBtn.addEventListener('click', closeVideo);
+      lightbox.addEventListener('click', e => { if (e.target === lightbox) closeVideo(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeVideo(); });
+    })();
 
     // Auto-rotate portfolio filters
     (function() {
