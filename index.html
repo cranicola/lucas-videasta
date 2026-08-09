@@ -413,100 +413,6 @@
       border-radius: 2px;
     }
 
-    /* ── TRAJETÓRIA ── */
-    .trajetoria {
-      grid-column: 1 / -1;
-      margin-top: 4rem;
-      padding-top: 3rem;
-      border-top: 1px solid rgba(122,227,255,0.12);
-    }
-
-    .trajetoria-label {
-      font-size: 0.7rem;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 2rem;
-    }
-
-    .trajetoria-items {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .trajetoria-item {
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-    }
-
-    .trajetoria-img {
-      width: 100%;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      border-radius: 2px;
-      border: 1px solid rgba(122,227,255,0.12);
-      cursor: pointer;
-      transition: border-color 0.3s;
-    }
-
-    .trajetoria-img:hover { border-color: var(--accent); }
-
-    .trajetoria-ano {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1rem;
-      color: var(--accent);
-      letter-spacing: 0.1em;
-    }
-
-    .trajetoria-titulo {
-      font-size: 0.88rem;
-      color: var(--text);
-      font-weight: 600;
-      line-height: 1.4;
-    }
-
-    .trajetoria-desc {
-      font-size: 0.78rem;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    /* Lightbox */
-    .lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.92);
-      z-index: 200;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-
-    .lightbox.open { display: flex; }
-
-    .lightbox img {
-      max-width: 90vw;
-      max-height: 90vh;
-      object-fit: contain;
-      border-radius: 2px;
-    }
-
-    .lightbox-close {
-      position: absolute;
-      top: 1.5rem; right: 1.5rem;
-      font-size: 2rem;
-      color: #fff;
-      cursor: pointer;
-      line-height: 1;
-      opacity: 0.7;
-      transition: opacity 0.2s;
-    }
-
-    .lightbox-close:hover { opacity: 1; }
-
     /* ── PORTFOLIO ── */
     #portfolio { background: #0C0F3F; }
 
@@ -518,7 +424,6 @@
       line-height: 1.8;
     }
 
-    /* Filtros */
     .portfolio-filters {
       display: flex;
       gap: 0.5rem;
@@ -563,9 +468,7 @@
       transition: opacity 0.3s, transform 0.3s;
     }
 
-    .portfolio-item.hidden {
-      display: none;
-    }
+    .portfolio-item.hidden { display: none; }
 
     .portfolio-item-inner {
       width: 100%;
@@ -580,8 +483,6 @@
     }
 
     .portfolio-item:hover .portfolio-item-inner { transform: scale(1.04); }
-
-    .portfolio-thumb-icon { font-size: 2.5rem; opacity: 0.3; }
 
     .portfolio-overlay {
       position: absolute;
@@ -611,13 +512,6 @@
       text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 0.2rem;
-    }
-
-    .portfolio-placeholder {
-      font-size: 0.8rem;
-      color: var(--muted);
-      text-align: center;
-      padding: 1rem;
     }
 
     .portfolio-cta { margin-top: 2.5rem; text-align: center; }
@@ -814,7 +708,7 @@
     <div class="hero-bg"></div>
     <div class="hero-corner-line"></div>
     <div class="gray-rule-v" style="left: 2rem; opacity:0.4;"></div>
-    <img src="imagens/imagem quadrados.png" alt="" aria-hidden="true" style="
+    <img src="imagem quadrados.png" alt="" aria-hidden="true" style="
       position:absolute;
       right: -60px;
       bottom: 80px;
@@ -860,7 +754,7 @@
 
       <a href="https://youtube.com/shorts/s4R92ppsqLc" target="_blank"
          class="portfolio-item" data-category="animacao">
-        <div class="portfolio-item-inner" style="background-image:url('imagens/capa 012.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-item-inner" style="background-image:url('capa 012.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
           <div class="portfolio-item-type">Animação Gráfica · Panevita</div>
           <div class="portfolio-item-title">Entrou na Sacola, Entrou na Rotina</div>
@@ -869,7 +763,7 @@
 
       <a href="https://youtube.com/shorts/cBMJ7r1JhwY" target="_blank"
          class="portfolio-item" data-category="animacao">
-        <div class="portfolio-item-inner" style="background-image:url('imagens/capa 013.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-item-inner" style="background-image:url('capa 013.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
           <div class="portfolio-item-type">Animação Gráfica · Panevita</div>
           <div class="portfolio-item-title">Panevita · Nordeste</div>
@@ -878,7 +772,7 @@
 
       <a href="https://youtube.com/shorts/qJRz9oKy4co" target="_blank"
          class="portfolio-item" data-category="ia">
-        <div class="portfolio-item-inner" style="background-image:url('imagens/capa IA.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-item-inner" style="background-image:url('capa IA.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
           <div class="portfolio-item-type">Vídeo com IA · Empresa de tecnologia em segurança</div>
           <div class="portfolio-item-title">Contando Carneirinhos</div>
@@ -887,7 +781,7 @@
 
       <a href="https://youtube.com/shorts/kB50iX6q-14" target="_blank"
          class="portfolio-item" data-category="podcast">
-        <div class="portfolio-item-inner" style="background-image:url('imagens/podcast-fala-quem-faz..png'); background-size:cover; background-position:center top; border:none;"></div>
+        <div class="portfolio-item-inner" style="background-image:url('podcast-fala-quem-faz..png'); background-size:cover; background-position:center top; border:none;"></div>
         <div class="portfolio-overlay always-visible">
           <div class="portfolio-item-type">Podcast · Produção Audiovisual</div>
           <div class="portfolio-item-title">Fala Quem Faz</div>
@@ -896,25 +790,25 @@
 
       <a href="https://youtube.com/shorts/2JWnlvgjG7o" target="_blank"
          class="portfolio-item" data-category="especialista">
-        <div class="portfolio-item-inner" style="background-image:url('imagens/capa hematologista.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-item-inner" style="background-image:url('capa hematologista.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
           <div class="portfolio-item-type">Especialista · Saúde</div>
           <div class="portfolio-item-title">Série Hematologia</div>
         </div>
       </a>
 
-      <a href="https://youtube.com/shorts/Y9f3Ymx3t8k" target="_blank"
+      <a href="https://drive.google.com/file/d/1ehrpJIXmBOgZX5eJcUPrGAb0df9qD93O/view" target="_blank"
          class="portfolio-item" data-category="artistico">
-        <div class="portfolio-item-inner" style="background-image:url('imagens/capa video fortim.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-item-inner" style="background-image:url('capa video fortim.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
           <div class="portfolio-item-type">Artístico · Imobiliário de luxo</div>
           <div class="portfolio-item-title">O Vento</div>
         </div>
       </a>
 
-      <a href="https://youtube.com/shorts/mnsMmEoO8fg" target="_blank"
+      <a href="https://drive.google.com/file/d/1p5FNYaR-9dKNWUargYVFFZBEav-yzmv5/view" target="_blank"
          class="portfolio-item" data-category="artistico">
-        <div class="portfolio-item-inner" style="background-image:url('imagens/Capa vivencia regenerativa.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-item-inner" style="background-image:url('Capa vivencia regenerativa.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
           <div class="portfolio-item-type">Artístico</div>
           <div class="portfolio-item-title">Vidas Poéticas</div>
@@ -923,7 +817,7 @@
 
       <a href="https://youtube.com/shorts/Z6bwmwp8DMY" target="_blank"
          class="portfolio-item" data-category="comercial">
-        <div class="portfolio-item-inner" style="background-image:url('imagens/capa 03.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-item-inner" style="background-image:url('capa 03.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
           <div class="portfolio-item-type">Comercial · Rastreamento</div>
           <div class="portfolio-item-title">Comercial Rastreamento 01</div>
@@ -932,7 +826,7 @@
 
       <a href="https://youtube.com/shorts/L1zI4znAhbg" target="_blank"
          class="portfolio-item" data-category="comercial">
-        <div class="portfolio-item-inner" style="background-image:url('imagens/capa 02.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-item-inner" style="background-image:url('capa 02.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
           <div class="portfolio-item-type">Comercial · Rastreamento</div>
           <div class="portfolio-item-title">Comercial Rastreamento 02</div>
@@ -941,7 +835,7 @@
 
       <a href="https://youtube.com/shorts/YVII5-AH4mM" target="_blank"
          class="portfolio-item" data-category="ia">
-        <div class="portfolio-item-inner" style="background-image:url('imagens/capa 05.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-item-inner" style="background-image:url('capa 05.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
           <div class="portfolio-item-type">Vídeo com IA</div>
           <div class="portfolio-item-title">Cachorro Falante</div>
@@ -950,7 +844,7 @@
 
       <a href="https://youtube.com/shorts/RSnfklFaY2A" target="_blank"
          class="portfolio-item" data-category="ia">
-        <div class="portfolio-item-inner" style="background-image:url('imagens/capa 04.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-item-inner" style="background-image:url('capa 04.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
           <div class="portfolio-item-type">Vídeo com IA</div>
           <div class="portfolio-item-title">Dia das Micro e Pequenas Empresas</div>
@@ -959,7 +853,7 @@
 
       <a href="https://youtube.com/shorts/n-hywWF93UY" target="_blank"
          class="portfolio-item" data-category="ia">
-        <div class="portfolio-item-inner" style="background-image:url('imagens/capa 08.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-item-inner" style="background-image:url('capa 08.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
           <div class="portfolio-item-type">Vídeo com IA</div>
           <div class="portfolio-item-title">Homenagem ao Empreendedor</div>
@@ -968,7 +862,7 @@
 
       <a href="https://youtube.com/shorts/bOO9QrJv-b4" target="_blank"
          class="portfolio-item" data-category="especialista">
-        <div class="portfolio-item-inner" style="background-image:url('imagens/capa 06.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-item-inner" style="background-image:url('capa 06.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
           <div class="portfolio-item-type">Especialista · Arquitetura</div>
           <div class="portfolio-item-title">Institucional Arquitetura 01</div>
@@ -977,7 +871,7 @@
 
       <a href="https://youtube.com/shorts/V6ZufIKkkAU" target="_blank"
          class="portfolio-item" data-category="especialista">
-        <div class="portfolio-item-inner" style="background-image:url('imagens/capa 07.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-item-inner" style="background-image:url('capa 07.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
           <div class="portfolio-item-type">Especialista · Arquitetura</div>
           <div class="portfolio-item-title">Institucional Arquitetura 02</div>
@@ -986,7 +880,7 @@
 
       <a href="https://youtube.com/shorts/4FfiZMDNuXU" target="_blank"
          class="portfolio-item" data-category="especialista">
-        <div class="portfolio-item-inner" style="background-image:url('imagens/capa 011.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-item-inner" style="background-image:url('capa 011.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
           <div class="portfolio-item-type">Especialista · Advocacia</div>
           <div class="portfolio-item-title">Especialista Advocacia 01</div>
@@ -995,7 +889,7 @@
 
       <a href="https://youtube.com/shorts/nxblDwVyVgw" target="_blank"
          class="portfolio-item" data-category="especialista">
-        <div class="portfolio-item-inner" style="background-image:url('imagens/capa 010.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-item-inner" style="background-image:url('capa 010.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
           <div class="portfolio-item-type">Especialista · Advocacia</div>
           <div class="portfolio-item-title">Especialista Advocacia 02</div>
@@ -1004,7 +898,7 @@
 
       <a href="https://youtube.com/shorts/EHotcGpiRoM" target="_blank"
          class="portfolio-item" data-category="comercial">
-        <div class="portfolio-item-inner" style="background-image:url('imagens/capa 01.png'); background-size:cover; background-position:center; border:none;"></div>
+        <div class="portfolio-item-inner" style="background-image:url('capa 01.png'); background-size:cover; background-position:center; border:none;"></div>
         <div class="portfolio-overlay always-visible">
           <div class="portfolio-item-type">Comercial · Rastreamento</div>
           <div class="portfolio-item-title">Comercial Rastreamento 03</div>
@@ -1106,7 +1000,7 @@
         <div class="servico-body">
           <div class="servico-body-inner">
             <p class="servico-desc">A IA expande o que é possível criar — e eu estou nessa fronteira. Em constante aprendizado nas ferramentas que estão redefinindo a produção audiovisual: Kling, Magnific, ElevenLabs, Videogen e mais.<br /><br /><span class="servico-badge">Novo</span></p>
-            <img src="imagens/capa IA.png" class="servico-img" alt="Vídeo com IA" />
+            <img src="capa IA.png" class="servico-img" alt="Vídeo com IA" />
           </div>
         </div>
       </div>
@@ -1177,7 +1071,6 @@
   </footer>
 
   <script>
-    // Nav scroll
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => {
       nav.style.borderBottomColor = window.scrollY > 50
@@ -1185,7 +1078,6 @@
         : 'rgba(122,227,255,0.15)';
     });
 
-    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         const target = document.querySelector(a.getAttribute('href'));
@@ -1196,7 +1088,6 @@
       });
     });
 
-    // Filtros do portfolio
     function filterPortfolio(category, btn, scroll) {
       document.querySelectorAll('.filter-btn').forEach(b => {
         b.classList.remove('active');
@@ -1218,18 +1109,23 @@
       }
     }
 
-    // Lightbox de vídeo — toca o Reel dentro do próprio site
+    // Lightbox de vídeo
     (function() {
       const lightbox = document.getElementById('videoLightbox');
       const frame = document.getElementById('videoLightboxFrame');
       const closeBtn = document.getElementById('videoLightboxClose');
 
-      function extractId(url) {
-        const m = url.match(/(?:shorts\/|embed\/|v=|youtu\.be\/)([A-Za-z0-9_-]{6,})/);
-        return m ? m[1] : null;
+      function getEmbedUrl(url) {
+        // Google Drive
+        const drive = url.match(/drive\.google\.com\/file\/d\/([A-Za-z0-9_-]+)/);
+        if (drive) return 'https://drive.google.com/file/d/' + drive[1] + '/preview';
+        // YouTube
+        const yt = url.match(/(?:shorts\/|embed\/|v=|youtu\.be\/)([A-Za-z0-9_-]{6,})/);
+        if (yt) return 'https://www.youtube.com/embed/' + yt[1] + '?autoplay=1&rel=0&playsinline=1';
+        return null;
       }
-      function openVideo(id) {
-        frame.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1';
+      function openVideo(embedUrl) {
+        frame.src = embedUrl;
         lightbox.classList.add('open');
         lightbox.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
@@ -1243,10 +1139,10 @@
 
       document.querySelectorAll('.portfolio-item').forEach(a => {
         a.addEventListener('click', e => {
-          const id = extractId(a.getAttribute('href') || '');
-          if (!id) return; // sem ID reconhecível: mantém o link normal
+          const embedUrl = getEmbedUrl(a.getAttribute('href') || '');
+          if (!embedUrl) return;
           e.preventDefault();
-          openVideo(id);
+          openVideo(embedUrl);
         });
       });
 
@@ -1255,17 +1151,14 @@
       document.addEventListener('keydown', e => { if (e.key === 'Escape') closeVideo(); });
     })();
 
-    // Auto-rotate portfolio filters
+    // Auto-rotate
     (function() {
       const filtersEl = document.getElementById('portfolioFilters');
       const sectionEl = document.getElementById('portfolio');
       let paused = false;
 
-      // Congela enquanto o mouse está em qualquer parte da seção de trabalhos,
-      // volta a girar quando o mouse sai da seção como um todo.
       sectionEl.addEventListener('mouseenter', () => paused = true);
       sectionEl.addEventListener('mouseleave', () => paused = false);
-      // Clicar numa categoria também congela (cobre toque, sem hover).
       filtersEl.addEventListener('click', () => paused = true);
 
       setInterval(() => {
@@ -1278,27 +1171,10 @@
       }, 3000);
     })();
 
-    // Accordion serviços
     function toggleServico(card) {
       const isOpen = card.classList.contains('open');
       document.querySelectorAll('.servico-card').forEach(c => c.classList.remove('open'));
       if (!isOpen) card.classList.add('open');
-    }
-
-    // Lightbox trajetória
-    function openLightbox(src) {
-      document.getElementById('lightbox-img').src = src;
-      document.getElementById('lightbox').classList.add('open');
-    }
-
-    function closeLightbox() {
-      document.getElementById('lightbox').classList.remove('open');
-    }
-
-    // Formulário
-    function handleForm(e) {
-      e.preventDefault();
-      alert('Mensagem enviada! Em breve entrarei em contato.');
     }
   </script>
 
