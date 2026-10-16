@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/cartao", "destination": "/index.html" }
+  ]
+}
